@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../udemy/udemy-course"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "myCode"
+	}
+}
