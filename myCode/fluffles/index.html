@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pet Info Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="title">
+        <img src="images/logo.png" alt="logo">
+        <h1>Thank you!</h1>
+        <p>Thank you for supporting our small business! We can’t wait to capture your pet’s unique personality into a timeless
+        custom pet portrait!</p>
+    </div>
+    <div class="content">
+        <form method="post" action="https://register-demo.freecodecamp.org">
+            <fieldset>
+                <label for="email" class="bold">Your email
+                    <input id="email" name="email" type="email" required /></label>
+                <label for="pet-name" class="bold">Your pet's name <span class="light">(optional)</span>
+                    <input id="breed" name="breed" type="text" /></label>
+                <label for="breed" class="bold">Your pet's breed
+                    <input id="breed" name="breed" type="text" /></label>
+                <label class="bold" for="pet-picture">Upload photos
+                    <input id="pet-picture" type="file" name="file" /></label>
+                <label for="referrer" class="bold">How did you hear about us?
+                    <select id="referrer" name="referrer">
+                        <option value="">(Select one)</option>
+                        <option value="1">In-person</option>
+                        <option value="2">Instagram</option>
+                        <option value="4">Other</option>
+                    </select>
+                </label>
+                <label for="bio" class="bold">Notes:
+                    <textarea id="bio" name="bio" rows="4" cols="2"
+                        placeholder="Anything you would like us to know =)"></textarea>
+                </label>
+            </fieldset>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+<script src="scripts.js"></script>
+
+</html>
