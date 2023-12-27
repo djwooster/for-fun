@@ -11,18 +11,33 @@ body {
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 .title {
+    background-color: white;
     display: flex;
     color: #5D3E52;
     flex-direction: column;
     align-items: center;
     padding: 1rem 1rem;
-    border-radius: 8px;
-    max-width: 50%;
-    margin: 4rem auto 0 auto;
-    border: 1px solid #5d3e5265;
+    border-radius: 32px;
+    max-width: 30%;
+    margin: 2rem auto 0 auto;
+    border: 1px solid #FBD6F1;
 }
 
+.content {
+    background-color: white;
+    border: 1px solid #FBD6F1;
+    max-width: 30%;
+    margin: 1rem auto;
+    padding: 1.5rem 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    border-radius: 24px;
+}
 .title h1 {
     font-family: Playfair Display;
     font-size: 3rem;;
@@ -43,17 +58,11 @@ body {
 
 .title p {
     color: #5D3E52;
-    max-width: 80%;
+    max-width: 90%;
+    font-size: .9rem;
+    line-height: 150%;
 }
 
-.content {
-    border: 1px solid #5d3e5265;;
-    max-width: 50%;
-    margin: 1rem auto;
-    padding: 1rem 1rem;
-    margin-top: 1rem;
-    border-radius: 8px;
-}
 
 h1,
 p {
@@ -71,10 +80,11 @@ form {
 
 fieldset {
     border: none;
-    padding: 1rem 0;
+    padding: 0;
     color: #5D3E52;
-    margin: 0;
+    margin: 0 0 1rem 0;
 }
+
 
 label {
     display: block;
@@ -82,14 +92,18 @@ label {
     margin-top: 1.25rem;
 }
 
+label:first-of-type {
+    margin-top: 0;
+}
+
 
 
 input,
 textarea, select {
-    background-color: rgb(252, 252, 252);
+    background-color: #f9fbff;
     border: 1px solid #5d3e5265;;
     color: #484848;
-    border-radius: 4px;
+    border-radius: 8px;
     width: 100%;
     margin: .25rem 0 0 0;
     width: 100%;
@@ -97,12 +111,55 @@ textarea, select {
 }
 
 
+textarea {
+    font-family: sans-serif;
+}
+
+textarea:focus {
+    
+    border: 2px solid #5d3e52b6;
+    color: #5d3e52b6;
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px rgba(93, 62, 82, 0.21),
+        0px 0px 4px 0px rgba(93, 62, 82, 0.18),
+        0px 0px 6px 0px rgba(93, 62, 82, 0.11),
+        0px 0px 6px 0px rgba(93, 62, 82, 0.03),
+        0px 0px 6px 0px rgba(93, 62, 82, 0.00)
+}
+
+input[type=text] {
+        background-color: #f9fbff;
+}
+input[type=text]:focus {
+        border: 2px solid #5d3e52b6;
+        background-color: white;
+        box-shadow: 0px 0px 2px 0px rgba(93, 62, 82, 0.21),
+            0px 0px 4px 0px rgba(93, 62, 82, 0.18),
+            0px 0px 6px 0px rgba(93, 62, 82, 0.11),
+            0px 0px 6px 0px rgba(93, 62, 82, 0.03),
+            0px 0px 6px 0px rgba(93, 62, 82, 0.00)
+}
+
+input[type=email] {
+    background-color: #f9fbff;
+}
+input[type=email]:focus {
+border: 2px solid #5d3e52b6;
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px rgba(93, 62, 82, 0.21),
+        0px 0px 4px 0px rgba(93, 62, 82, 0.18),
+        0px 0px 6px 0px rgba(93, 62, 82, 0.11),
+        0px 0px 6px 0px rgba(93, 62, 82, 0.03),
+        0px 0px 6px 0px rgba(93, 62, 82, 0.00)
+}
+
 input[type=submit] {
-    border-radius: 12px;
+    border-radius: 8px;
+    font-weight: 600;
     display: block;
     width: 100%;
     margin: 0 auto;
-    min-height: 3em;
+    min-height: 2.25em;
     font-size: 1.1rem;
     background-color: #5D3E52;
     border-color: white;
@@ -112,10 +169,10 @@ input[type=submit]:hover {
     display: block;
     width: 100%;
     margin: 0 auto;
-    min-height: 3em;
+    min-height: 2.25em;
     font-size: 1.1rem;
     background-color: #4b3042;
-    border-color: #653f58;
+    border: 4 px solid #ffffff;
     color: white;
     cursor: pointer;
 }
@@ -126,8 +183,8 @@ input[type=file] {
 
 input::file-selector-button {
     font-weight: bold;
-    background-color: #e8e8e8;
-    color: rgb(75, 128, 168);
+    background-color: hsl(0, 0%, 99%);
+    color: #2666e7;
     padding: 0.5em;
     border: thin solid rgb(220, 220, 220);
     border-radius: 5px;
@@ -135,11 +192,19 @@ input::file-selector-button {
 }
 
 input::file-selector-button:hover {
-    background-color: #d8d9da;
-    color: rgb(100, 100, 100);
+    background-color: hsl(0, 5%, 97%);
+    color: hsl(220, 75%, 45%);
     font-weight: bold;
     padding: 0.5em;
-    border: thin solid rgb(220, 220, 220);
+    border: 1px solid hsl(217, 81%, 80%);
+    border-radius: 5px;
+}
+input::file-selector-button:active {
+    background-color: hsl(0, 5%, 95%);
+    color: hsl(220, 75%, 35%);
+    font-weight: bold;
+    padding: 0.5em;
+    border: 1px solid hsl(217, 81%, 80%);
     border-radius: 5px;
 }
 
